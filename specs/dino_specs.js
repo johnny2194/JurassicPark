@@ -13,5 +13,5 @@ describe("Dino", function () {
 
     it("has averageOffspringPerYear", function () {
         assert.strictEqual(dino.averageOffspringPerYear, 2);
-    })
-})
+    });
+});
