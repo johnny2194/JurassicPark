@@ -19,17 +19,29 @@ describe("Park", function () {
     it("can add dinosaur", function () {
            park.add(velociraptor)
            assert.strictEqual(park.enclosure.has(velociraptor), true)
-       })
+    })
 
     it("can add two types", function () {
        park.add(velociraptor)
        park.add(trex)
        assert.strictEqual(park.enclosure.has(velociraptor), true)
        assert.strictEqual(park.enclosure.has(trex), true)
-     });
-    
+    });
+
     it("can get number of dinosaur type", function () {
            park.add(velociraptor)
            assert.strictEqual(park.numberOf(velociraptor), 1)
-       })
+    });
+
+    it("can add two of same type", function () {
+            park.add(velociraptor)
+            park.add(velociraptor)
+            assert.strictEqual(park.numberOf(velociraptor), 2)
+        })
+        
+    it("can delete dinosaur type", function () {
+        park.add(velociraptor)
+        park.removeType(velociraptor)
+        assert.strictEqual(park.enclosure.has(velociraptor), false)
+    })
 });        

@@ -9,11 +9,15 @@ Park.prototype = {
   },
 
   numberOf: function (dino) {
-      if (this.enclosure.has(dino)) {    
-          return this.enclosure.get(dino)
+    if (this.enclosure.has(dino)) {    
+      return this.enclosure.get(dino)
       } else {
-          return 0
-      }
+        return 0
+    }
+  },
+
+  removeType: function (dinosaur) {
+    this.enclosure.delete(dinosaur)
   },
 }    
 
